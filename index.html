@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dOTC</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <main>
+      <!-- header: title, logo, connect wallet button ----------------------------------------------->
+      <div class="main-header">
+        <h1 class="header-text">dOTC prototype site</h1>
+        <!-- <h2></h2> -->
+        <button class="connect-wallet-btn enableEthereumButton">
+          Connect Wallet
+        </button>
+      </div>
+      <!-- main content: view market button, market view -------------------------------------------->
+      <div class="main-content">
+        <button type="button" class="view-market-btn" onclick="showMarket();">
+          View Market
+        </button>
+        <div class="market-view">
+          <div class="market-table" id="market-view">
+            <table>
+              <thead>
+                <tr class="header-row">
+                  <th>Offer Contract</th>
+                  <th>Price per Jewel</th>
+                  <th>Jewel Amount</th>
+                  <th>Token Wanted</th>
+                  <th>&nbsp&nbsp&nbsp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- tr = table row -->
+                <tr class="reg-row">
+                  <td>0xBlah</td>
+                  <td>$2.15</td>
+                  <td>
+                    753,228.91<br />
+                    JEWEL
+                  </td>
+                  <td>
+                    1,622,456.07<br />
+                    1USDC
+                  </td>
+                  <td>
+                    <button type="button" class="approve-btn">
+                      Approve<br />1USDC
+                    </button>
+                  </td>
+                </tr>
+                <tr class="reg-row">
+                  <td>sample</td>
+                  <td>sample</td>
+                  <td>
+                    sample<br />
+                    JEWEL
+                  </td>
+                  <td>
+                    sample<br />
+                    1USDC
+                  </td>
+                  <td>
+                    <button type="button" class="approve-btn">
+                      Approve<br />1USDC
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/index.js"></script>
+  <!-- <script
+    language="javascript"
+    type="text/javascript"
+    src="web3.min.js"
+  ></script>
+  <script type="module" src="js/detect.js"></script> -->
+</html>
