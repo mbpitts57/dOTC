@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Web3 from "../node_modules/web3/dist/web3.min.js";
+import "./css/App.css";
+import { WETH_LENS_ABI, WETH_LENS_ADDRESS } from "./config";
+// import TodoList from './TodoList'
+import TodoList from "./components/market-view.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+
+  }
 
 export default App;

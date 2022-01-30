@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Chakra+Petch:wght@300;400&family=Play&family=Rajdhani:wght@300;400&family=Saira+Condensed:wght@100;200&family=Source+Code+Pro:wght@200;300&display=swap");
+
+body,
+html {
+  height: 100%;
+  font-family: "Source Code Pro", sans-serif;
+  margin: 0px;
+  background-color: gainsboro;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.header-text {
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animation {
+  border-right: 0.06em solid;
+  animation: caret 1.2s steps(1) 4;
+}
+
+button {
+}
+
+// styling for button that connects user to their metamask wallet
+.connect-wallet-btn {
+  width: 10em;
+  margin: auto;
+  font-size: larger;
+  margin-bottom: 1em;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.view-market-btn {
+  display: flex;
+  justify-content: center;
+  width: 10em;
+  margin: auto;
+  font-size: larger;
+  margin-bottom: 1em;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.market-view {
+  display: none;
+
+  .market-table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+    width: 56em;
+    background: darkgray;
+    border: outset 0.2em;
+    border-color: rgb(201, 201, 201);
+
+    .header-row,
+    .reg-row {
+      display: flex;
+      justify-content: space-around;
+      width: 56em;
+    }
+
+    td,
+    th {
+      width: 9em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    button {
+      width: 5rem;
+      margin: auto;
+      margin-bottom: 1em;
+      font-family: "Source Code Pro", sans-serif;
+    }
+  }
+}
