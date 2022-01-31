@@ -1,5 +1,5 @@
-var OFFER_LENS_ADD = "0xbb6692D85fF5E4269E78B7E64919e2c994dc9104";
-var OFFER_LENS_ABI = [
+export const WETH_LENS_ADDRESS = "0xbb6692D85fF5E4269E78B7E64919e2c994dc9104";
+export const WETH_LENS_ABI = [
   {
     inputs: [],
     name: "DAI",
@@ -103,5 +103,3 @@ var OFFER_LENS_ABI = [
     type: "function",
   },
 ];
-
-export {OFFER_LENS_ABI, OFFER_LENS_ADD}
