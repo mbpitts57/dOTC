@@ -5,6 +5,7 @@
 // const ethereumButton = document.querySelector(".enableEthereumButton");
 var marketButton = document.querySelector(".view-market-btn");
 var marketView = document.querySelector(".market-view");
+// const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 // // from Metamask docs
 // ethereumButton.addEventListener("click", () => {

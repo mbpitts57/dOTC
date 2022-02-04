@@ -1,24 +1,27 @@
 import "./css/App.css";
 import "./config.js";
-const Web3 = require('web3');
-const rpcUrl = "https://ropsten.infura.io/v3/93c6f5f4400c471da81104e6b61bf9f5";
-const web3 = new Web3(rpcUrl);
+// const Web3 = require('web3');
+// const rpcUrl = "https://ropsten.infura.io/v3/93c6f5f4400c471da81104e6b61bf9f5";
+// const web3 = new Web3(rpcUrl);
+const { ethers } = require("ethers");
 
-async function GetAllActiveOffers(host, OFFER_LENS_ABI, OFFER_LENS_ADD) {
-  const contractInstance = new web3.eth.Contract(
-    OFFER_LENS_ABI,
-    OFFER_LENS_ADD
-  );
-  const offerList = await contractInstance.methods
-    .getAllActiveOfferInfo(0x45e9668ad6a5fc79b860e82afae1f3bbcf5b0fc6)
-    .call();
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+const signer = provider.getSigner();
+
+async function GetAllActiveOffers(OFFER_LENS_ABI, OFFER_LENS_ADD, provider) {
+  const contractInstance = new ethers.Contract(OFFER_LENS_ADD, OFFER_LENS_ABI, provider);
+
+  const offerList = await contractInstance.getActiveOffers();
+  // const offerListString = JSON.stringify(offerList);
 
   function logOffers() {
     console.log(offerList);
   }
+
   return (
-    // <button onClick={logOffers}>Console Log all Offers</button>
-    <div>test</div>
+    <div className="GetAllActiveOffers">
+    <button onClick={logOffers}>Console Log all Offers</button>
+    </div>
   );
 }
 
