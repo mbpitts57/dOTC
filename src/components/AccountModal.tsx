@@ -147,7 +147,7 @@ import {
               fontWeight="medium"
               fontSize="md"
             >
-              Your transactions willl appear here...
+              Your transactions will appear here...
             </Text>
           </ModalFooter>
         </ModalContent>
